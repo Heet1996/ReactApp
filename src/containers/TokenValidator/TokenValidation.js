@@ -24,7 +24,9 @@ class TokenValidator extends Component
       {
         if(this.props.error==='INVALID')
         err=(<h4 className="error">Token is InValid.</h4>)
-        else err=(<h4 className="error">{this.props.error.message}</h4>);
+        else if(this.props.error==='Success') err=(<h4 style={{fontSize:'1.6rem'}}>Token is Valid</h4>);
+             else err=(<h4 className="error">{this.props.error.message}</h4>);
+    
       }  
       return (  
       <div className="TokenPage">

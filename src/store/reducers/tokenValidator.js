@@ -14,7 +14,7 @@ let tokenReducer=(state=initialState,actions)=>{
         case actionTypes.TOKEN_VALIDATION_SUCCESS: return{...state,error:null,loading:false};
         case actionTypes.TOKEN_VALIDATION_FAIL:return {...state,error:actions.err,loading:false,token:null};
         case actionTypes.TOKEN_INVALID:return {...state,token:null,error:"INVALID"};
-        case actionTypes.TOKEN_SETTER:  return {...state,token:actions.token}
+        case actionTypes.TOKEN_SETTER:  return {...state,token:actions.token,error:"Success"}
         default : return state;
     }
 
